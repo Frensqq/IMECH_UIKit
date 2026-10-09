@@ -36,6 +36,16 @@ import com.example.uikit.R
 import com.example.uikit.UI.Dimension
 import com.example.uikit.UI.IMECHTheme
 
+/**
+ * Элемент выбора элементов
+ *
+ * @param value - текущее значение
+ * @param placeholder - подсказка выбора
+ * @param onValueChange - действие смена значения
+ * @param listValue - лист значений
+ *
+ * ЛядовС 09.10.26
+ */
 @Composable
 fun Selects(
     value: String,
