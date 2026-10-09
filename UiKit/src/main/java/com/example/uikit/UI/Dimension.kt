@@ -21,7 +21,11 @@ object Dimension {
     }
     object Spacer {
         val small = 8.dp
+
+        val default = 16.dp
         val medium = 18.dp
+
+        val mediumVertical = 10.dp
     }
     object Padding {
         val xSmall = 4.dp
