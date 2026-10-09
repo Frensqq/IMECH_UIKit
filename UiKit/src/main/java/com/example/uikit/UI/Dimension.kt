@@ -7,6 +7,9 @@ object Dimension {
     object Height {
         val buttonHeight = 58.dp
     }
+    object Spacer {
+        val medium = 18.dp
+    }
     object Float{
         val buttonWidth = 0.56f
     }

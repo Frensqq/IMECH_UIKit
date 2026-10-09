@@ -22,6 +22,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.uikit.UI.Dimension
 import com.example.uikit.UI.IMECHTheme
 
+/**
+ * Кнопка из иконки и текста
+ *
+ * @param enabled - состояние активности
+ * @param text - текст кнопки
+ * @param onClick - действие клика
+ *
+ * ЛядовС 09.10.26
+ */
 @Composable
 fun PrimaryButton(
     onClick: () -> Unit,
@@ -69,11 +78,13 @@ fun PreviewPrimaryButton(){
 
     Column(modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
+        verticalArrangement = Arrangement.Center,
     ) {
 
         PrimaryButton({},
             "Let’s Combat!")
+
+
 
     }
 
