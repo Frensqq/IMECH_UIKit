@@ -11,7 +11,11 @@ data class IMECHColor(
     val white: Color,
     val error: Color,
     val success: Color,
-    val cardStroke: Color
+    val cardStroke: Color,
+
+
+    val buttonGradientStart: Color,
+    val buttonGradientEnd: Color,
 )
 
 val defaultColor  = IMECHColor(
@@ -22,6 +26,8 @@ val defaultColor  = IMECHColor(
     error = Color(0xffFF4646),
     success = Color(0xff08F403),
     cardStroke = Color(0xffF4C73E),
+    buttonGradientStart = Color(0xffFF6480),
+    buttonGradientEnd = Color(0xffF22E63)
 )
 
 val LocalIMECHColor = compositionLocalOf { defaultColor }

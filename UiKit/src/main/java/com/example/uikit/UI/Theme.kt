@@ -59,7 +59,7 @@ fun IMECHTheme(
     }
 }
 
-object FNCHTheme {
+object IMECHTheme {
 
     val color: IMECHColor
         @Composable get() = defaultColor
