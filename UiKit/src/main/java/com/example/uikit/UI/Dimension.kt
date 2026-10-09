@@ -8,6 +8,7 @@ object Dimension {
     object Size{
         val iconSize = 12.dp
         val sizeBox = 14.dp
+        val sizeSmallBox = 10.dp
     }
     object Rounded{
         val xSmall = 4.dp
