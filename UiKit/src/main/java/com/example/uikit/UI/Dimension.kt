@@ -13,12 +13,13 @@ object Dimension {
     object Rounded{
         val xSmall = 4.dp
         val small = 8.dp
-        val medium = 12.dp
+        val medium = 10.dp
     }
 
     object Height {
         val buttonHeight = 58.dp
         val inputHeight = 26.dp
+        val timerHeight = 100.dp
     }
     object Spacer {
         val small = 8.dp
@@ -27,10 +28,12 @@ object Dimension {
         val medium = 18.dp
 
         val mediumVertical = 10.dp
+        val xMediumVertical = 14.dp
     }
     object Padding {
         val xSmall = 4.dp
         val small = 6.dp
+        val smallP = 7.dp
         val dSmall = 12.dp
         val defaultScreen = 20.dp
     }
