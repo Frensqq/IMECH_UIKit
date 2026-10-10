@@ -24,9 +24,8 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.uikit.R
+import com.example.uikit.UI.Dimension
 
 @Composable
 fun BottomBar(
@@ -35,12 +34,12 @@ fun BottomBar(
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(90.dp)
+            .height(Dimension.Height.bottomBar)
             .drawBehind {
                 val center = size.width / 2
-                val top = 28.dp.toPx()
-                val halfWidth = 65.dp.toPx()
-                val smooth = 25.dp.toPx()
+                val top = Dimension.Cutout.top.toPx()
+                val halfWidth = Dimension.Cutout.halfWidth.toPx()
+                val smooth = Dimension.Cutout.smooth.toPx()
 
                 val path = Path().apply {
                     moveTo(0f, top)
@@ -73,13 +72,13 @@ fun BottomBar(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(66.dp)
+                .height(Dimension.Height.bottomBarRow)
                 .align(Alignment.BottomCenter)
-                .padding(bottom = 8.dp),
+                .padding(bottom = Dimension.Padding.bottomBarBottom),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
-                Modifier.weight(1f),
+                Modifier.weight(Dimension.Float.default),
                 contentAlignment = Alignment.Center
             ) {
                 ItemBottomBar(
@@ -90,7 +89,7 @@ fun BottomBar(
             }
 
             Box(
-                Modifier.weight(1f),
+                Modifier.weight(Dimension.Float.default),
                 contentAlignment = Alignment.Center
             ) {
                 ItemBottomBar(
@@ -101,10 +100,10 @@ fun BottomBar(
             }
 
             // Место под центральную кнопку
-            Spacer(Modifier.weight(1f))
+            Spacer(Modifier.weight(Dimension.Float.default))
 
             Box(
-                Modifier.weight(1f),
+                Modifier.weight(Dimension.Float.default),
                 contentAlignment = Alignment.Center
             ) {
                 ItemBottomBar(
@@ -115,7 +114,7 @@ fun BottomBar(
             }
 
             Box(
-                Modifier.weight(1f),
+                Modifier.weight(Dimension.Float.default),
                 contentAlignment = Alignment.Center
             ) {
                 ItemBottomBar(
@@ -126,19 +125,18 @@ fun BottomBar(
             }
         }
 
-        // Центральная кнопка с белым ободком
         Box(
             modifier = Modifier
-                .padding(vertical = 15.dp)
+                .padding(vertical = Dimension.Padding.centerButtonVertical)
                 .align(Alignment.TopCenter)
-                .size(54.dp)
+                .size(Dimension.Size.centerButtonOuter)
                 .background(Color.White, CircleShape)
                 .clickable { onItemClick("Calendar") },
             contentAlignment = Alignment.Center
         ) {
             Box(
                 modifier = Modifier
-                    .size(44.dp)
+                    .size(Dimension.Size.centerButtonInner)
                     .background(
                         Color(0xFFFF3267),
                         CircleShape
@@ -149,7 +147,7 @@ fun BottomBar(
                     painter = painterResource(R.drawable.calendar),
                     contentDescription = "Calendar",
                     tint = Color.White,
-                    modifier = Modifier.size(23.dp)
+                    modifier = Modifier.size(Dimension.Size.centerButtonIcon)
                 )
             }
         }
