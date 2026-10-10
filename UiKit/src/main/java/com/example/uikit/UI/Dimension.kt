@@ -28,6 +28,7 @@ object Dimension {
 
         val default = 16.dp
         val medium = 18.dp
+        val large = 36.dp
 
         val mediumVertical = 10.dp
         val xMediumVertical = 14.dp
@@ -47,6 +48,7 @@ object Dimension {
     }
     object Float{
         val buttonWidth = 0.56f
+        val medium = 0.5f
         val default = 1f
     }
 }

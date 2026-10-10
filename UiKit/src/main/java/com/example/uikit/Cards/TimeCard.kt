@@ -115,6 +115,14 @@ fun TimeCard(
     }
 }
 
+/**
+ * Колонка для дат
+ *
+ * @param time - значение
+ * @param title - заголовок
+ *
+ * ЛядовС 10.10.26
+ */
 @Composable
 fun ColumnTimeCard(
     title: String,
