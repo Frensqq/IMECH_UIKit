@@ -20,6 +20,7 @@ object Dimension {
         val buttonHeight = 58.dp
         val inputHeight = 26.dp
         val timerHeight = 100.dp
+        val cardHeight = 169.dp
     }
     object Spacer {
         val small = 8.dp
@@ -35,6 +36,8 @@ object Dimension {
         val small = 6.dp
         val smallP = 7.dp
         val dSmall = 12.dp
+        val large = 24.dp
+        val largeP = 30.dp
         val defaultScreen = 20.dp
     }
     object Stroke {
