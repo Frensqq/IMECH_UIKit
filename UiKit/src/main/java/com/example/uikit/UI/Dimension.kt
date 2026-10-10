@@ -21,6 +21,7 @@ object Dimension {
         val inputHeight = 26.dp
         val timerHeight = 100.dp
         val cardHeight = 169.dp
+        val timeCardHeight = 152.dp
     }
     object Spacer {
         val small = 8.dp

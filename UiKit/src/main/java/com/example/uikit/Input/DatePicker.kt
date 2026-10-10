@@ -25,6 +25,7 @@ import java.util.Locale
 /**
  * Функция выбора даты
  *
+ * @param title - заголовок
  * @param value - выбранная дата
  * @param onValueChange - изменение выбранной даты
  *
@@ -32,6 +33,7 @@ import java.util.Locale
  */
 @Composable
 fun DatePicker(
+    title: String,
     value: String,
     onValueChange: (String) -> Unit
 ) {
@@ -42,7 +44,7 @@ fun DatePicker(
         verticalArrangement = Arrangement.spacedBy(Dimension.Spacer.mediumVertical)
     ) {
         Text(
-            "FROM",
+            title,
             style = IMECHTheme.typography.bodySmall.copy(
                 fontFamily = FontFamily(Font(R.font.regular))
             ),
@@ -94,6 +96,6 @@ fun PreviewDatePicker() {
     ) {
         var date by remember { mutableStateOf("MON, NOV 4, 2019") }
 
-        DatePicker(date) { date = it }
+        DatePicker("FROM", date) { date = it }
     }
 }
