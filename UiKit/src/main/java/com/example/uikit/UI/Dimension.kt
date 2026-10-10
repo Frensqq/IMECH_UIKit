@@ -17,6 +17,7 @@ object Dimension {
     }
 
     object Height {
+        val bottomBarItemHeight = 35.dp
         val buttonHeight = 58.dp
         val inputHeight = 26.dp
         val timerHeight = 100.dp
