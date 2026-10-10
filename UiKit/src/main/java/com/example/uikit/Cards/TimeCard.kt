@@ -34,6 +34,7 @@ import com.example.uikit.Input.TimePicker
 import com.example.uikit.R
 import com.example.uikit.UI.Dimension
 import com.example.uikit.UI.IMECHTheme
+import java.nio.file.WatchEvent
 
 /**
  * Карточка временные интервалы
@@ -54,52 +55,63 @@ fun TimeCard(
 ){
 
     Column(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
             .height(Dimension.Height.timeCardHeight)
             .clip(RoundedCornerShape(Dimension.Rounded.medium))
-            .background(Brush.linearGradient(
-                colors = listOf(
-                    IMECHTheme.color.buttonGradientStart,
-                    IMECHTheme.color.buttonGradientEnd
+            .background(
+                Brush.linearGradient(
+                    colors = listOf(
+                        IMECHTheme.color.buttonGradientStart,
+                        IMECHTheme.color.buttonGradientEnd
+                    )
                 )
-            )).padding(horizontal = Dimension.Padding.defaultScreen, vertical = Dimension.Spacer.medium),
+            )
+            .padding(
+                horizontal = Dimension.Padding.defaultScreen,
+                vertical = Dimension.Spacer.medium
+            ),
         verticalArrangement = Arrangement.SpaceBetween
+
     ){
-        Column(verticalArrangement = Arrangement.spacedBy(Dimension.Spacer.xMediumVertical)) {
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(Dimension.Padding.small),
-                verticalAlignment = Alignment.CenterVertically
-                )
-            {
-                Icon(
-                    painter = painterResource(R.drawable.time_icon),
-                    contentDescription = null, tint = IMECHTheme.color.white
-                )
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(Dimension.Padding.small),
+            verticalAlignment = Alignment.CenterVertically
+        )
+        {
+            Icon(
+                painter = painterResource(R.drawable.time_icon),
+                contentDescription = null, tint = IMECHTheme.color.white
+            )
 
-                Text(
-                    "TIME INTERVAL",
-                    style = IMECHTheme.typography.titleSmall,
-                    color = IMECHTheme.color.white
-                )
-            }
-
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-
-                ColumnTimeCard("FROM", dateFrom)
-                ColumnTimeCard("FROM", timeFrom)
-
-            }
+            Text(
+                "TIME INTERVAL",
+                style = IMECHTheme.typography.titleSmall,
+                color = IMECHTheme.color.white
+            )
         }
+
 
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+            Column(
+                modifier = Modifier,
+                verticalArrangement = Arrangement.spacedBy(Dimension.Spacer.xMediumVertical)
+            ) {
 
-            ColumnTimeCard("TO", dateTo)
-            ColumnTimeCard("TO", timeTo)
 
+                ColumnTimeCard("FROM", dateFrom)
+
+                ColumnTimeCard("TO", dateTo)
+
+            }
+
+            Column(
+                verticalArrangement = Arrangement.spacedBy(Dimension.Spacer.xMediumVertical)
+            ) {
+                ColumnTimeCard("FROM", timeFrom)
+                ColumnTimeCard("TO", timeTo)
+            }
         }
-
-
-
     }
 }
 
