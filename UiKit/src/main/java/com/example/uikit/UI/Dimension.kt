@@ -10,7 +10,8 @@ object Dimension {
         val sizeBox = 14.dp
         val sizeSmallBox = 10.dp
 
-        // новые
+        val avatarDefault = 56.dp
+
         val bottomBarIcon = 24.dp
         val centerButtonOuter = 54.dp
         val centerButtonInner = 44.dp
@@ -24,6 +25,7 @@ object Dimension {
     }
 
     object Height {
+        val avatarDesc = 14.dp
         val bottomBarItemHeight = 35.dp
         val buttonHeight = 58.dp
         val inputHeight = 26.dp
@@ -31,7 +33,6 @@ object Dimension {
         val cardHeight = 169.dp
         val timeCardHeight = 152.dp
 
-        // новые
         val bottomBar = 90.dp
         val bottomBarRow = 66.dp
     }
