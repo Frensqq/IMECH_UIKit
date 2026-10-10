@@ -25,6 +25,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
+import com.example.uikit.Cards.AvatarCard
 import com.example.uikit.R
 import com.example.uikit.Timer.Timer
 import com.example.uikit.UI.Dimension
@@ -33,6 +34,7 @@ import com.example.uikit.UI.IMECHTheme
 /**
  * Универсальный аватар c именем
  *
+ * @param state - состояние пользователя
  * @param name - имя пользователя
  * @param stateBorder - состояние рамки аватара
  * @param size - размер аватара
@@ -117,6 +119,8 @@ fun PreviewAvatarName() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        AvatarName("HOST", "Scott Brown", stateBorder = false);
+        AvatarName("HOST", "Scott Brown", stateBorder = false)
+
+        AvatarCard("Stone Stellar", "Gold Player")
     }
 }

@@ -31,8 +31,9 @@ import com.example.uikit.UI.Dimension
 import com.example.uikit.UI.IMECHTheme
 
 /**
- * Универсальный аватар c именем
+ * Универсальный аватар c именем справа
  *
+ * @param state - состояние пользователя
  * @param name - имя пользователя
  * @param stateBorder - состояние рамки аватара
  * @param size - размер аватара
