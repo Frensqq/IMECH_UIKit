@@ -16,6 +16,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.uikit.Navigation.Points
+import com.example.uikit.TopBar.NavigationTopBar
 import com.example.uikit.UI.Dimension
 import com.example.uikit.UI.IMECHTheme
 
@@ -59,6 +60,8 @@ fun PreviewTimer() {
         verticalArrangement = Arrangement.Center
     ) {
 
-        Timer("00","00");
+        Timer("00","00")
+
+        NavigationTopBar("Stone Stellar", {})
     }
 }

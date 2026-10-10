@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.Dp
 import com.example.uikit.Cards.AvatarCard
 import com.example.uikit.R
 import com.example.uikit.Timer.Timer
+import com.example.uikit.TopBar.NavigationTopBar
 import com.example.uikit.UI.Dimension
 import com.example.uikit.UI.IMECHTheme
 
@@ -122,5 +123,7 @@ fun PreviewAvatarName() {
         AvatarName("HOST", "Scott Brown", stateBorder = false)
 
         AvatarCard("Stone Stellar", "Gold Player")
+
+
     }
 }

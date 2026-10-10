@@ -11,6 +11,7 @@ object Dimension {
         val sizeSmallBox = 10.dp
 
         val avatarDefault = 56.dp
+        val avatarSmall = 22.dp
 
         val bottomBarIcon = 24.dp
         val centerButtonOuter = 54.dp
@@ -38,6 +39,7 @@ object Dimension {
     }
 
     object Spacer {
+        val exSmall = 3.dp
         val small = 8.dp
         val default = 16.dp
         val medium = 18.dp
