@@ -12,6 +12,7 @@ object Dimension {
 
         val avatarDefault = 56.dp
         val avatarSmall = 22.dp
+        val avatarMedium= 28.dp
 
         val bottomBarIcon = 24.dp
         val centerButtonOuter = 54.dp
@@ -49,6 +50,7 @@ object Dimension {
     }
 
     object Padding {
+        val exSmall = 2.dp
         val xSmall = 4.dp
         val small = 6.dp
         val smallP = 7.dp
@@ -59,6 +61,7 @@ object Dimension {
 
         // новые
         val bottomBarBottom = 8.dp
+        val cardPadding = 10.dp
         val centerButtonVertical = 15.dp
     }
 

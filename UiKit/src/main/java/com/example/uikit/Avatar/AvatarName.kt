@@ -90,13 +90,13 @@ fun AvatarName(
         }
 
         Box(
-            modifier = Modifier.height(Dimension.Height.avatarDesc). clip(CircleShape)
+            modifier = Modifier. clip(CircleShape)
                 .background(Brush.linearGradient(
                     colors = listOf(
                         IMECHTheme.color.buttonGradientStart,
                         IMECHTheme.color.buttonGradientEnd
                     )
-                )).padding(horizontal = Dimension.Padding.small),
+                )).padding(horizontal = Dimension.Padding.small, vertical =  Dimension.Padding.exSmall),
             contentAlignment = Alignment.Center
         ) {
 
