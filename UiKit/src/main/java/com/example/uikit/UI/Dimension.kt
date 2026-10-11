@@ -13,6 +13,7 @@ object Dimension {
         val avatarDefault = 56.dp
         val avatarSmall = 22.dp
         val avatarMedium= 28.dp
+        val avatarMediumP= 37.dp
 
         val bottomBarIcon = 24.dp
         val centerButtonOuter = 54.dp

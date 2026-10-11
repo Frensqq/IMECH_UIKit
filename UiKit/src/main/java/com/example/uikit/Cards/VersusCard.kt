@@ -1,4 +1,4 @@
-package com.example.uikit.Button
+package com.example.uikit.Cards
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -39,9 +39,13 @@ fun VersusCard(
     painterRight: Painter = painterResource(R.drawable.icon),
 ){
 
-    BackGroundCard {
-        Row(modifier = Modifier.fillMaxWidth().height(centerButtonOuter), horizontalArrangement = Arrangement.spacedBy(
-            Dimension.Spacer.default) ) {
+    _root_ide_package_.com.example.uikit.Button.BackGroundCard {
+        Row(
+            modifier = Modifier.fillMaxWidth().height(centerButtonOuter),
+            horizontalArrangement = Arrangement.spacedBy(
+                Dimension.Spacer.default
+            )
+        ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 AvatarName(
                     stateLeft,
@@ -88,8 +92,13 @@ fun VersusCard(
                 CardColumn(
                     "Status:",
                     statusGame,
-                    if(statusGame == "Active") {IMECHTheme.color.success } else if(statusGame == "Open" || statusGame == "Processing") {
-                        IMECHTheme.color.accent} else {IMECHTheme.color.onSurfase}
+                    if (statusGame == "Active") {
+                        IMECHTheme.color.success
+                    } else if (statusGame == "Open" || statusGame == "Processing") {
+                        IMECHTheme.color.accent
+                    } else {
+                        IMECHTheme.color.onSurfase
+                    }
                 )
                 CardColumn(
                     "Winning Price:",
