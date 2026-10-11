@@ -21,7 +21,7 @@ import com.example.uikit.UI.Dimension
 import com.example.uikit.UI.IMECHTheme
 
 @Composable
-fun Timer(hours: String, min: String){
+fun Timer(hours: Int, min: Int){
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -44,7 +44,7 @@ fun Timer(hours: String, min: String){
             color = IMECHTheme.color.white
         )
 
-        Text("$hours:$min",
+        Text("${if (hours < 10) "0$hours" else hours}:${if (min < 10) "0$min" else min}",
             style = IMECHTheme.typography.displayLarge,
             color = IMECHTheme.color.white
         )
@@ -60,7 +60,8 @@ fun PreviewTimer() {
         verticalArrangement = Arrangement.Center
     ) {
 
-        Timer("00","00")
+        Timer(1,10)
+        Timer(10,1)
 
         NavigationTopBar("Stone Stellar", {})
     }
